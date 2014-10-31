@@ -1,28 +1,14 @@
 <?php
-/*
-  $Id$
-
-  osCommerce, Open Source E-Commerce Solutions
-  http://www.oscommerce.com
-
-  Copyright (c) 2002 osCommerce
-
-  Released under the GNU General Public License
-*/
-
-// define our webserver variables
-// FS = Filesystem (physical)
-// WS = Webserver (virtual)
-  define('HTTP_SERVER', ''); // eg, http://localhost or - https://localhost should not be NULL for productive servers
-  define('HTTP_CATALOG_SERVER', '');
-  define('HTTPS_CATALOG_SERVER', '');
-  define('ENABLE_SSL_CATALOG', 'false'); // secure webserver for catalog module
-  define('DIR_FS_DOCUMENT_ROOT', $DOCUMENT_ROOT); // where your pages are located on the server. if $DOCUMENT_ROOT doesnt suit you, replace with your local path. (eg, /usr/local/apache/htdocs)
-  define('DIR_WS_ADMIN', '/admin/');
-  define('DIR_FS_ADMIN', DIR_FS_DOCUMENT_ROOT . DIR_WS_ADMIN);
-  define('DIR_WS_CATALOG', '/catalog/');
-  define('DIR_WS_HTTPS_CATALOG', '/catalog/');
-  define('DIR_FS_CATALOG', DIR_FS_DOCUMENT_ROOT . DIR_WS_CATALOG);
+  define('HTTP_SERVER', 'http://192.168.79.132');
+  define('HTTP_CATALOG_SERVER', 'http://192.168.79.132');
+  define('HTTPS_CATALOG_SERVER', 'http://192.168.79.132');
+  define('ENABLE_SSL_CATALOG', 'false');
+  define('DIR_FS_DOCUMENT_ROOT', '/var/www/oscommerce/');
+  define('DIR_WS_ADMIN', '/oscommerce/admin/');
+  define('DIR_FS_ADMIN', '/var/www/oscommerce/admin/');
+  define('DIR_WS_CATALOG', '/oscommerce/');
+  define('DIR_WS_HTTPS_CATALOG', '/oscommerce/');
+  define('DIR_FS_CATALOG', '/var/www/oscommerce/');
   define('DIR_WS_IMAGES', 'images/');
   define('DIR_WS_ICONS', DIR_WS_IMAGES . 'icons/');
   define('DIR_WS_CATALOG_IMAGES', DIR_WS_CATALOG . 'images/');
@@ -40,11 +26,11 @@
   define('DIR_FS_DOWNLOAD', DIR_FS_CATALOG . 'download/');
   define('DIR_FS_DOWNLOAD_PUBLIC', DIR_FS_CATALOG . 'pub/');
 
-// define our database connection
-  define('DB_SERVER', '');
-  define('DB_SERVER_USERNAME', 'mysql');
-  define('DB_SERVER_PASSWORD', '');
-  define('DB_DATABASE', 'osCommerce');
+  define('DB_SERVER', 'localhost');
+  define('DB_SERVER_USERNAME', 'admin');
+  define('DB_SERVER_PASSWORD', 'admin');
+  define('DB_DATABASE', 'oscommerce');
   define('USE_PCONNECT', 'false');
-  define('STORE_SESSIONS', '');
+  define('STORE_SESSIONS', 'mysql');
+  define('CFG_TIME_ZONE', 'UTC');
 ?>
